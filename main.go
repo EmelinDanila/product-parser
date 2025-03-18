@@ -133,7 +133,7 @@ func saveToCSV(products []Product) {
 	defer file.Close()
 
 	writer := csv.NewWriter(file)
-	writer.Comma = ';'
+	writer.Comma = ','
 	defer writer.Flush()
 
 	writer.Write([]string{"Название товара", "Цена", "Ссылка"})
